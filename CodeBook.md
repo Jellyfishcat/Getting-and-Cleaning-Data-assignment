@@ -3,9 +3,9 @@
 - date: "16.08.2021"
 - output: "tidydata.txt""
 ## Data description
-The final summary tidy dataset **tidydata.txt** contains the average of each variable for each activity and each subject from the Human Activity Recognition Using Smartphones Data Set. 
+The final summary tidy dataset **tidydata.txt** created by run_analysis.R R script, contains the average of each variable for each activity and each subject from the Human Activity Recognition Using Smartphones Data Set. 
 The first row contains the names of 88 columns.
-- 88 columns: 86 variables, which are listed and described in the Variable section; as well as 2 identifiers, listed and described in the Identifier section
+- 88 columns: 86 variables, which are listed and described in the measurement section; as well as 2 identifiers, listed and described in the Identifier section
 - 180 rows: contain the values of these variables.
 ## Identifier
 The final tidydata is grouped by the following identifiers to calculate mean and standard deviation:
@@ -18,7 +18,7 @@ The final tidydata is grouped by the following identifiers to calculate mean and
 4. SITTING
 5. STANDING
 6. LAYING
-## Variable
+## Measurement
 The features selected for the database come from the accelerometer and gyroscope 3-axial raw signals **tAcc_XYZ** and **tGyro_XYZ**. 
 These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. 
 Similarly, the acceleration signal was then separated into body and gravity acceleration signals (**tBodyAcc_XYZ** and **tGravityAcc_XYZ**) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
@@ -67,4 +67,17 @@ All measurements are floating-point values, normalised and bounded within [-1,1]
 [82] "angle(tBodyGyroMean_gravityMean)"     "angle(tBodyGyroJerkMean_gravityMean)" "angle(X_gravityMean)"                
 [85] "angle(Y_gravityMean)"                 "angle(Z_gravityMean)"                
 
-The tidydata was created by run_analysis.R R script.
+## Midway products
+- features <- features.txt : 561 rows, 2 columns. List of all the measurements in UCI dataset
+- activityname <- activity_labels.txt : 6 rows, 2 columns. Contains 6 activities listed above with IDs corresponding to y_test/training.txt
+- test_subject <- test/subject_test.txt : 2947 rows, 1 column. Each row identifies the subject who performed the activity for each window sample.
+- test <- test/X_test.txt : 2947 rows, 561 columns. Contains test sets
+- test_label <- test/y_test.txt : 2947 rows, 1 columns. Contains test data of activities' labels
+- training_subject <- test/subject_train.txt : 7352 rows, 1 column. 
+- training <- test/X_train.txt : 7352 rows, 561 columns. Contains training sets
+- training_label <- test/y_train.txt : 7352 rows, 1 columns. Contains training data of activities' labels
+- test1/training1: 2947 rows, 563 columns/7352 rows, 563 columns. Combination of test/training sets, test/training_label and subject
+- merged: 10299 rows, 561 columns. Combination of test1 and training1 using rbind() function
+- final: 10299 rows, 88 columns. Subset of merged set, which only contains mean/standard deviation variables and 2 identifiers.
+- tidydata: 180 rows, 88 columns. The final clean data, the output data.
+- selected: a list of integer. Contains locations of each variable requested (variables on the mean and standard deviation)
