@@ -4,8 +4,8 @@
 - output: "tidydata.txt""
 ## Data description
 The final summary tidy dataset **tidydata.txt** contains the average of each variable for each activity and each subject from the Human Activity Recognition Using Smartphones Data Set. 
-The first row contains the names of 68 columns.
-- 68 columns: 66 variables, which are listed and described in the Variable section; as well as 2 identifiers, listed and described in the Identifier section
+The first row contains the names of 88 columns.
+- 88 columns: 86 variables, which are listed and described in the Variable section; as well as 2 identifiers, listed and described in the Identifier section
 - 180 rows: contain the values of these variables.
 ## Identifier
 The final tidydata is grouped by the following identifiers to calculate mean and standard deviation:
