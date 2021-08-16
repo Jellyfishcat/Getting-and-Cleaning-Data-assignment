@@ -1,16 +1,16 @@
 # Code book for Coursera Getting and Cleaning Data course project
-author: "Xiaomeng Li"
-date: "16.08.2021"
-output: "tidydata.txt""
+- author: "Xiaomeng Li"
+- date: "16.08.2021"
+- output: "tidydata.txt""
 ## Data description
 The final summary tidy dataset **tidydata.txt** contains the average of each variable for each activity and each subject from the Human Activity Recognition Using Smartphones Data Set. 
 The first row contains the names of 68 columns.
-68 columns: 66 variables, which are listed and described in the Variable section; as well as 2 identifiers, listed and described in the Identifier section
-180 rows: contain the values of these variables.
+- 68 columns: 66 variables, which are listed and described in the Variable section; as well as 2 identifiers, listed and described in the Identifier section
+- 180 rows: contain the values of these variables.
 ## Identifier
 The final tidydata is grouped by the following identifiers to calculate mean and standard deviation:
-**subject**: The ID of the subject who carried out the experiment. 1-30
-**activity**: The type of activity performed when the corresponding measurements were taken. 
+1. **subject**: The ID of the subject who carried out the experiment. 1-30
+2. **activity**: The type of activity performed when the corresponding measurements were taken. 
 1-6:
 1. WALKING
 2. WALKING_UPSTAIRS
