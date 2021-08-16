@@ -12,12 +12,12 @@ The final tidydata is grouped by the following identifiers to calculate mean and
 **subject**: The ID of the subject who carried out the experiment. 1-30
 **activity**: The type of activity performed when the corresponding measurements were taken. 
 1-6:
-1.WALKING
-2.WALKING_UPSTAIRS
-3.WALKING_DOWNSTAIRS
-4.SITTING
-5.STANDING
-6.LAYING
+1. WALKING
+2. WALKING_UPSTAIRS
+3. WALKING_DOWNSTAIRS
+4. SITTING
+5. STANDING
+6. LAYING
 ## Variable
 The features selected for the database come from the accelerometer and gyroscope 3-axial raw signals **tAcc_XYZ** and **tGyro_XYZ**. 
 These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. 
@@ -26,14 +26,14 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (**tBodyAccMag**, **tGravityAccMag**, **tBodyAccJerkMag**, **tBodyGyroMag**, **tBodyGyroJerkMag**). 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing **fBodyAcc_XYZ**, **fBodyAccJerk_XYZ**, **fBodyGyro_XYZ**, **fBodyAccJerkMag**, **fBodyGyroMag**, **fBodyGyroJerkMag**. (Note the 'f' to indicate frequency domain signals)
 
-'t' or 'f' - time or frequency domain signals
-'Acc' or 'Gyro'- data from the accelerometer or gyroscope
-'Body' or 'Gravity' - the acceleration signal was then separated into body and gravity acceleration signals
-'Jerk' - Jerk signals based on body linear acceleration and angular velocity
-'Meg' - the magnitude of these three-dimensional signals
-'mean' - Mean value
-'std' - Standard deviation
-'XYZ' - 3-axial signals in the X, Y and Z directions.
+1. 't' or 'f' - time or frequency domain signals
+2. 'Acc' or 'Gyro'- data from the accelerometer or gyroscope
+3. 'Body' or 'Gravity' - the acceleration signal was then separated into body and gravity acceleration signals
+4. 'Jerk' - Jerk signals based on body linear acceleration and angular velocity
+5. 'Meg' - the magnitude of these three-dimensional signals
+6. 'mean' - Mean value
+7. 'std' - Standard deviation
+8. 'XYZ' - 3-axial signals in the X, Y and Z directions.
 
 All measurements are floating-point values, normalised and bounded within [-1,1].
 
