@@ -24,7 +24,7 @@ colnames(training1) <- c("activity", "subject", features[,2])
 merged <- rbind(test1, training1)
 
 ## 4. Extracts only the measurements on the mean and standard deviation for each measurement. 
-selected <- grep("mean\\(\\)|std\\(\\)", names(merged)) 
+selected <- grep(".*Mean.*|.*Std.*", names(merged), ignore.case=TRUE) 
 final <- merged[,c(1,2,selected)]
 
 ## 5. Uses descriptive activity names to name the activities in the data set
@@ -34,6 +34,7 @@ final$activity <- factor(final$activity, levels = activityname[,1], labels = act
 ## 6. Appropriately labels the data set with descriptive variable names. 
 names(final) <- gsub("\\()", "", names(final))
 names(final) <- gsub("-", "_", names(final)) 
+names(final) <- gsub(",","_",names(final))
 # underlines are valid in R, and i still think some separaters are neccessary. "tBodyAcc_mean_Y" is much clearer than "tBodyAccmeanY"
 # f-frequency/t-time is explained in CodeBook.
 
@@ -42,7 +43,7 @@ library(dplyr)
 tidydata <- final %>% 
       group_by(activity, subject) %>%
       summarize(
-            across(1:66, mean)
+            across(1:86, mean)
             )
 # save the tidy data
 write.table(tidydata, file = "tidydata.txt",row.name = FALSE)
