@@ -36,7 +36,7 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 - 'XYZ' - 3-axial signals in the X, Y and Z directions.
 
 All measurements are floating-point values, normalised and bounded within [-1,1].
-
+**I am confused here for which mean/std variables i should select. Finally I just selected all the variables including words "mean" or "std"**
  [1] "tBodyAcc-mean()-X"                    "tBodyAcc-mean()-Y"                    "tBodyAcc-mean()-Z"                   
  [4] "tBodyAcc-std()-X"                     "tBodyAcc-std()-Y"                     "tBodyAcc-std()-Z"                    
  [7] "tGravityAcc-mean()-X"                 "tGravityAcc-mean()-Y"                 "tGravityAcc-mean()-Z"                
