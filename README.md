@@ -14,7 +14,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 ## Files in repo
 1) **tidydata.txt**: A tidy data set, created by run_analysis.R, containing the average of each variable for each activity and each subject (see the CodeBook for details). 
-2) **run_analysis.R**: It retrieves the source data set, transforms it to produce the clean data set, and creates the data set tidydata.txt.
+2) **run_analysis.R**: It retrieves the source data set, transforms it to produce the clean data set, and creates the data set tidydata.txt. (see the CodeBook & run_analysis.R for detail)
 3) **CodeBook.md**: Describes the variables, the data, and any transformations or work that you performed to clean up the data
 4) **README.md**: Introduction to the project.
 
