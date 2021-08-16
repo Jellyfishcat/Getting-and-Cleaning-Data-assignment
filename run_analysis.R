@@ -24,6 +24,7 @@ colnames(training1) <- c("activity", "subject", features[,2])
 merged <- rbind(test1, training1)
 
 ## 4. Extracts only the measurements on the mean and standard deviation for each measurement. 
+# I am confused here for which mean/std variables i should select. Finally I just selected all the variables including words "mean" or "std"
 selected <- grep(".*Mean.*|.*Std.*", names(merged), ignore.case=TRUE) 
 final <- merged[,c(1,2,selected)]
 
